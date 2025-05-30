@@ -6,8 +6,8 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'my-app/tests/helpers';
 import { module, test } from 'qunit';
 
-  // prettier-ignore
-  interface TestContext extends BaseTestContext {
+// prettier-ignore
+interface TestContext extends BaseTestContext {
     name: string;
   }
 
@@ -53,7 +53,8 @@ module('Integration | Component | hello', function (hooks) {
       hbs`
         <Hello @age={{30}}
         @name={{this.name}} {{! prettier-ignore }}
-      data-test-message  />`);
+      data-test-message  />`,
+    );
   });
 
   // prettier-ignore

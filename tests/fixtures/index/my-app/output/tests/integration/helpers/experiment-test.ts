@@ -9,8 +9,8 @@ module('Integration | Helper | experiment', function (hooks) {
     'experiment-a': 'v1',
   });
 
-// prettier-ignore
-test('returns true if the experiment name and variant are a match', async function (assert) {
+  // prettier-ignore
+  test('returns true if the experiment name and variant are a match', async function (assert) {
     // prettier-ignore
       await render(hbs`{{#if (experiment name="experiment-a" variant="v1")}}
       <div data-test-block>
@@ -24,7 +24,7 @@ test('returns true if the experiment name and variant are a match', async functi
   });
 
   test('returns false if the experiment name and variant are not a match', async function (assert) {
-    await render(/* prettier-ignore */hbs`
+    await render(/* prettier-ignore */ hbs`
       {{#if (experiment name="experiment-a" variant="control")}}
         <div data-test-block>
           Some content
@@ -52,9 +52,7 @@ test('returns true if the experiment name and variant are a match', async functi
     `);
 
     // aprettier-ignore
-    assert
-      .dom('[data-test-block]')
-      .doesNotExist();
+    assert.dom('[data-test-block]').doesNotExist();
   });
 
   test('returns false if the variant has not been assigned', async function (assert) {

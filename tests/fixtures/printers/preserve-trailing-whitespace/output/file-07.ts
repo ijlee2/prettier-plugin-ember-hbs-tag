@@ -13,7 +13,9 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (2)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`<!-- Some comment 1 --> <Hello /> <!-- Some comment 2 -->`);
+    await render<TestContext>(
+      hbs`<!-- Some comment 1 --> <Hello /> <!-- Some comment 2 -->`,
+    );
   });
 
   test('it renders (3)', async function (this: TestContext, assert) {
@@ -40,7 +42,9 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (6)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`{{! Some comment 1 }}<Hello />{{! Some comment 2 }}`);
+    await render<TestContext>(
+      hbs`{{! Some comment 1 }}<Hello />{{! Some comment 2 }}`,
+    );
   });
 
   test('it renders (7)', async function (this: TestContext, assert) {

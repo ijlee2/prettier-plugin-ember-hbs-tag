@@ -12,7 +12,7 @@ const template = hbs`    <div
       {{this.someGetter}}
 </div> `;
 
-  render(hbs`    <div  data-test-field="😀😀route🎉🎉"
+render(hbs`    <div  data-test-field="😀😀route🎉🎉"
 class={{local styles "message" "highlight"}}>
     {{@model.message}}
   </div>
@@ -43,7 +43,7 @@ const template = a`    <div
       {{this.someGetter}}
 </div> `;
 
-  render(a`    <div  data-test-field="😀😀route🎉🎉"
+render(a`    <div  data-test-field="😀😀route🎉🎉"
 class={{local styles "message" "highlight"}}>
     {{@model.message}}
   </div>

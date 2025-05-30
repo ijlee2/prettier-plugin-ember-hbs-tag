@@ -30,17 +30,16 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (3)', async function (this: TestContext, assert) {
-    await render<TestContext>(
-      hbs``,
-    );
+    await render<TestContext>(hbs``);
 
     assert.ok(true);
   });
 
   test('it renders (4)', async function (this: TestContext, assert) {
-await render<TestContext>(hbs`
+    await render<TestContext>(hbs`
 
-`);assert.ok(true);
+`);
+    assert.ok(true);
   });
 
   test('it renders (5)', async function (this: TestContext, assert) {
@@ -55,27 +54,30 @@ await render<TestContext>(hbs`
     assert.ok(true);
   });
 
-
   test('it renders (7)', async function (this: TestContext, assert) {
-    await render<TestContext>(
-      hbs`Hello {{this.name}}!`
-    );
+    await render<TestContext>(hbs`Hello {{this.name}}!`);
 
     assert.ok(true);
   });
 
   test('it renders (8)', async function (this: TestContext, assert) {
-    const aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = render;
+    const aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa =
+      render;
 
-    await aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<TestContext>(hbs``);
+    await aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<TestContext>(
+      hbs``,
+    );
 
     assert.ok(true);
   });
 
   test('it renders (9)', async function (this: TestContext, assert) {
-    const aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = render;
+    const aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa =
+      render;
 
-    await aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<TestContext>(hbs`Hello {{this.name}}!`);
+    await aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<TestContext>(
+      hbs`Hello {{this.name}}!`,
+    );
 
     assert.ok(true);
   });

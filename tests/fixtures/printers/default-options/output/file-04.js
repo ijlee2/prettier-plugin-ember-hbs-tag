@@ -26,18 +26,17 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (5)', async function (assert) {
-    await render(hbs
-    `
+    await render(hbs`
       <Hello />
-    `,
-    );
+    `);
   });
 
   test('it renders (6)', async function (assert) {
     await render(
       hbs`
         <Hello />
-    `);
+    `,
+    );
   });
 
   test('it renders (7)', async function (assert) {
@@ -49,7 +48,9 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (8)', async function (assert) {
-    await render(hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa />`);
+    await render(
+      hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa />`,
+    );
   });
 
   test('it renders (9)', async function (assert) {

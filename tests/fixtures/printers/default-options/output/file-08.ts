@@ -18,11 +18,15 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (1)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`<Hello data-test-message @name={{this.name}} @age={{30}} />`);
+    await render<TestContext>(
+      hbs`<Hello data-test-message @name={{this.name}} @age={{30}} />`,
+    );
   });
 
   test('it renders (2)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`  <Hello  @age={{30}}  data-test-message @name={{this.name}}  />  `);
+    await render<TestContext>(
+      hbs`  <Hello  @age={{30}}  data-test-message @name={{this.name}}  />  `,
+    );
   });
 
   test('it renders (3)', async function (this: TestContext, assert) {
@@ -47,7 +51,8 @@ module('Integration | Component | hello', function (hooks) {
       hbs`
         <Hello @age={{30}}
         @name={{this.name}}
-      data-test-message  />`);
+      data-test-message  />`,
+    );
   });
 
   test('it renders (6)', async function (this: TestContext, assert) {
@@ -65,7 +70,9 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (8)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa data-test-message @name={{this.name}} @age={{30}} />`);
+    await render<TestContext>(
+      hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa data-test-message @name={{this.name}} @age={{30}} />`,
+    );
   });
 
   test('it renders (9)', async function (this: TestContext, assert) {
