@@ -32,14 +32,14 @@ module('Integration | Component | ui/form/number', function (hooks) {
 
   test('The component renders a label and an input', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
-                                        <Ui::Form::Number
-                                          @changeset={{this.changeset}}
-                                          @key="donation"
-                                          @label="Donation amount ($)"
-                                          @minValue={{0}}
-                                          @onUpdate={{this.updateChangeset}}
-                                          @placeholder="100"
-                                        />
+      <Ui::Form::Number
+        @changeset={{this.changeset}}
+        @key="donation"
+        @label="Donation amount ($)"
+        @minValue={{0}}
+        @onUpdate={{this.updateChangeset}}
+        @placeholder="100"
+      />
     `);
 
     assert
@@ -62,7 +62,17 @@ module('Integration | Component | ui/form/number', function (hooks) {
 
   test('We can pass @isDisabled to disable the input', async function (this: TestContext, assert) {
     await render<TestContext>(
-      hbs`  <Ui::Form::Number  @changeset={{this.changeset}}  @isDisabled={{true}}  @key="donation"  @label="Donation amount ($)"  @minValue={{0}}  @onUpdate={{this.updateChangeset}}  @placeholder="100"  />  `,
+      hbs`
+        <Ui::Form::Number
+          @changeset={{this.changeset}}
+          @isDisabled={{true}}
+          @key="donation"
+          @label="Donation amount ($)"
+          @minValue={{0}}
+          @onUpdate={{this.updateChangeset}}
+          @placeholder="100"
+        />
+      `,
     );
 
     assert
@@ -72,9 +82,16 @@ module('Integration | Component | ui/form/number', function (hooks) {
 
   test('We can pass @isReadOnly to display the value', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
-<Ui::Form::Number
-  @changeset={{this.changeset}} @isReadOnly={{true}} @key="donation" @label="Donation amount ($)" @minValue={{0}} @onUpdate={{this.updateChangeset}} @placeholder="100"
-/>`);
+      <Ui::Form::Number
+        @changeset={{this.changeset}}
+        @isReadOnly={{true}}
+        @key="donation"
+        @label="Donation amount ($)"
+        @minValue={{0}}
+        @onUpdate={{this.updateChangeset}}
+        @placeholder="100"
+      />
+    `);
 
     assert
       .dom('[data-test-field="Donation amount ($)"]')
@@ -122,12 +139,17 @@ module('Integration | Component | ui/form/number', function (hooks) {
       set(this.changeset, key, value);
     };
 
-    await render<TestContext>(hbs`<Ui::Form::Number
-@changeset={{this.changeset}}
- @isRequired={{true}}
-   @key="donation"
-  @label="Donation amount ($)"        @minValue={{0}}    @onUpdate={{this.updateChangeset}}
- @placeholder="100"     /> `);
+    await render<TestContext>(hbs`
+      <Ui::Form::Number
+        @changeset={{this.changeset}}
+        @isRequired={{true}}
+        @key="donation"
+        @label="Donation amount ($)"
+        @minValue={{0}}
+        @onUpdate={{this.updateChangeset}}
+        @placeholder="100"
+      />
+    `);
 
     // Update the value
     await fillIn('[data-test-field="Donation amount ($)"]', '');

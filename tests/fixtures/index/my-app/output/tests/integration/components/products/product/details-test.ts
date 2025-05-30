@@ -35,7 +35,9 @@ module('Integration | Component | products/product/details', function (hooks) {
 
   test('it renders', async function (this: TestContext, assert) {
     await render<TestContext>(
-      hbs`  <Products::Product::Details  @product={{this.product}}  />  `,
+      hbs`
+        <Products::Product::Details @product={{this.product}} />
+      `,
     );
 
     assert
@@ -73,7 +75,9 @@ module('Integration | Component | products/product/details', function (hooks) {
     const stubbedLog = stub(console, 'log');
 
     await render<TestContext>(
-      hbs`<Products::Product::Details @product={{this.product}} />`,
+      hbs`
+        <Products::Product::Details @product={{this.product}} />
+      `,
     );
 
     await click('[data-test-button="Add to Cart"]');

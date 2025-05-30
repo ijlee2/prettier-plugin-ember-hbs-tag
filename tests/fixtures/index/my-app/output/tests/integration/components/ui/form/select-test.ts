@@ -50,9 +50,14 @@ module('Integration | Component | ui/form/select', function (hooks) {
 
   test('The component renders a label and a select', async function (this: TestContext, assert) {
     await render<TestContext>(
-      hbs`  <Ui::Form::Select    @changeset={{this.changeset}}
-    @key="sortBy"    @label="Sort by"
-        @onUpdate={{this.updateChangeset}}  @options={{this.options}}    />
+      hbs`
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+          @options={{this.options}}
+        />
       `,
     );
 
@@ -95,12 +100,12 @@ module('Integration | Component | ui/form/select', function (hooks) {
   test('The component renders when @options is undefined', async function (this: TestContext, assert) {
     await render<TestContext>(
       hbs`
-<Ui::Form::Select
-@changeset={{this.changeset}}
-@key="sortBy"
-@label="Sort by"
-@onUpdate={{this.updateChangeset}}
-/>
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+        />
       `,
     );
 
@@ -126,11 +131,16 @@ module('Integration | Component | ui/form/select', function (hooks) {
 
   test('We can pass @isDisabled to disable the select', async function (this: TestContext, assert) {
     await render<TestContext>(
-      hbs`    <Ui::Form::Select     @changeset={{this.changeset}}  @isDisabled={{true}}
- @key="sortBy"
-    @label="Sort by" @onUpdate={{this.updateChangeset}}
-   @options={{this.options}}  />
-    `,
+      hbs`
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @isDisabled={{true}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+          @options={{this.options}}
+        />
+      `,
     );
 
     assert
@@ -140,10 +150,16 @@ module('Integration | Component | ui/form/select', function (hooks) {
 
   test('We can pass @isReadOnly to display the value', async function (this: TestContext, assert) {
     await render<TestContext>(
-      hbs`  <Ui::Form::Select   @changeset={{this.changeset}}  @isReadOnly={{true}}
-        @key="sortBy"  @label="Sort by"   @onUpdate={{this.updateChangeset}} @options={{this.options}}
-      />
-       `,
+      hbs`
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @isReadOnly={{true}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+          @options={{this.options}}
+        />
+      `,
     );
 
     assert
@@ -155,15 +171,15 @@ module('Integration | Component | ui/form/select', function (hooks) {
   test('We can pass @isRequired to require a value', async function (this: TestContext, assert) {
     await render<TestContext>(
       hbs`
-                      <Ui::Form::Select
-                        @changeset={{this.changeset}}
-                        @isRequired={{true}}
-                        @key="sortBy"
-                        @label="Sort by"
-                        @onUpdate={{this.updateChangeset}}
-                        @options={{this.options}}
-                      />
-                    `,
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @isRequired={{true}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+          @options={{this.options}}
+        />
+      `,
     );
 
     assert
@@ -189,12 +205,16 @@ module('Integration | Component | ui/form/select', function (hooks) {
     };
 
     await render<TestContext>(
-      hbs`  <Ui::Form::Select   @changeset={{this.changeset}}   @isRequired={{true}}    
-       @key="sortBy"  @label="Sort by" @onUpdate={{this.updateChangeset}}     
-        @options={{this.options}}   
-
-         />
-    `,
+      hbs`
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @isRequired={{true}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+          @options={{this.options}}
+        />
+      `,
     );
 
     await selectByLabel('[data-test-field="Sort by"]', 'Price: High to Low');
@@ -230,13 +250,14 @@ module('Integration | Component | ui/form/select', function (hooks) {
 
     await render<TestContext>(
       hbs`
-          <Ui::Form::Select
-                @changeset={{this.changeset}}
-                 @isRequired={{true}}   
-                @key="sortBy"
-                    @label="Sort by"      @onUpdate={{this.updateChangeset}}  
-                  @options={{this.options}}
-           />      
+        <Ui::Form::Select
+          @changeset={{this.changeset}}
+          @isRequired={{true}}
+          @key="sortBy"
+          @label="Sort by"
+          @onUpdate={{this.updateChangeset}}
+          @options={{this.options}}
+        />
       `,
     );
 

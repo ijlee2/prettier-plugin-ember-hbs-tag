@@ -24,7 +24,7 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (2)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`    `);
+    await render<TestContext>(hbs``);
 
     assert.ok(true);
   });
@@ -36,26 +36,36 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (4)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`
-
-`);
+    await render<TestContext>(hbs``);
     assert.ok(true);
   });
 
   test('it renders (5)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`.`);
+    await render<TestContext>(
+      hbs`
+        .
+      `,
+    );
 
     assert.ok(true);
   });
 
   test('it renders (6)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`Hello {{this.name}}!`);
+    await render<TestContext>(
+      hbs`
+        Hello {{this.name}}!
+      `,
+    );
 
     assert.ok(true);
   });
 
   test('it renders (7)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`Hello {{this.name}}!`);
+    await render<TestContext>(
+      hbs`
+        Hello {{this.name}}!
+      `,
+    );
 
     assert.ok(true);
   });
@@ -76,7 +86,9 @@ module('Integration | Component | hello', function (hooks) {
       render;
 
     await aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<TestContext>(
-      hbs`Hello {{this.name}}!`,
+      hbs`
+        Hello {{this.name}}!
+      `,
     );
 
     assert.ok(true);

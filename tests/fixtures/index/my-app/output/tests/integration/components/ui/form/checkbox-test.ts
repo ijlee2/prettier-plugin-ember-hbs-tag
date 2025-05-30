@@ -33,7 +33,10 @@ module('Integration | Component | ui/form/checkbox', function (hooks) {
   test('The component renders a label and a checkbox', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
       <Ui::Form::Checkbox
-        @changeset={{this.changeset}} @key="subscribe" @label="Subscribe to The Ember Times?" @onUpdate={{this.updateChangeset}}
+        @changeset={{this.changeset}}
+        @key="subscribe"
+        @label="Subscribe to The Ember Times?"
+        @onUpdate={{this.updateChangeset}}
       />
     `);
 
@@ -59,8 +62,11 @@ module('Integration | Component | ui/form/checkbox', function (hooks) {
   test('We can pass @isDisabled to disable the checkbox', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
       <Ui::Form::Checkbox
-        @changeset={{this.changeset}} @isDisabled={{true}} @key="subscribe"
-        @label="Subscribe to The Ember Times?" @onUpdate={{this.updateChangeset}}
+        @changeset={{this.changeset}}
+        @isDisabled={{true}}
+        @key="subscribe"
+        @label="Subscribe to The Ember Times?"
+        @onUpdate={{this.updateChangeset}}
       />
     `);
 
@@ -71,13 +77,15 @@ module('Integration | Component | ui/form/checkbox', function (hooks) {
   });
 
   test('We can pass @isReadOnly to display the value', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`<Ui::Form::Checkbox
-  @changeset={{this.changeset}}
-  @isReadOnly={{true}}
-  @key="subscribe"
-  @label="Subscribe to The Ember Times?"
-  @onUpdate={{this.updateChangeset}}
-/>`);
+    await render<TestContext>(hbs`
+      <Ui::Form::Checkbox
+        @changeset={{this.changeset}}
+        @isReadOnly={{true}}
+        @key="subscribe"
+        @label="Subscribe to The Ember Times?"
+        @onUpdate={{this.updateChangeset}}
+      />
+    `);
 
     assert
       .dom('[data-test-field="Subscribe to The Ember Times?"]')
@@ -88,14 +96,14 @@ module('Integration | Component | ui/form/checkbox', function (hooks) {
 
   test('We can pass @isRequired to require a value', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
-<Ui::Form::Checkbox
-  @changeset={{this.changeset}}
-  @isRequired={{true}}
-  @key="subscribe"
-  @label="Subscribe to The Ember Times?"
-  @onUpdate={{this.updateChangeset}}
-/>
-`);
+      <Ui::Form::Checkbox
+        @changeset={{this.changeset}}
+        @isRequired={{true}}
+        @key="subscribe"
+        @label="Subscribe to The Ember Times?"
+        @onUpdate={{this.updateChangeset}}
+      />
+    `);
 
     assert
       .dom('[data-test-label]')
@@ -125,13 +133,13 @@ module('Integration | Component | ui/form/checkbox', function (hooks) {
     };
 
     await render<TestContext>(hbs`
-        <Ui::Form::Checkbox
-          @changeset={{this.changeset}}
-          @isRequired={{true}}
-          @key="subscribe"
-          @label="Subscribe to The Ember Times?"
-          @onUpdate={{this.updateChangeset}}
-        />
+      <Ui::Form::Checkbox
+        @changeset={{this.changeset}}
+        @isRequired={{true}}
+        @key="subscribe"
+        @label="Subscribe to The Ember Times?"
+        @onUpdate={{this.updateChangeset}}
+      />
     `);
 
     // Click the checkbox
@@ -179,13 +187,9 @@ module('Integration | Component | ui/form/checkbox', function (hooks) {
     await render<TestContext>(hbs`
       <Ui::Form::Checkbox
         @changeset={{this.changeset}}
-
         @isRequired={{true}}
-
         @key="subscribe"
-
         @label="Subscribe to The Ember Times?"
-
         @onUpdate={{this.updateChangeset}}
       />
     `);

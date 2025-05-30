@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { assert, loadFixture } from '@codemod-utils/tests';
 
-import type { PluginOptions } from '../../src/options.js';
+import type { NodeType, PluginOptions } from '../../src/index.js';
 import { formatFile } from './format-file.js';
 
 type DirJSON = Parameters<typeof loadFixture>[0];
@@ -11,7 +11,7 @@ type DirJSON = Parameters<typeof loadFixture>[0];
 type Options = {
   fileName: string;
   fixturePath: string;
-  pluginOptions?: PluginOptions;
+  pluginOptions?: Partial<PluginOptions<NodeType>>;
 };
 
 export async function runPrettierOnFile(options: Options): Promise<void> {
@@ -39,7 +39,7 @@ export async function runPrettierOnFile(options: Options): Promise<void> {
   assert.strictEqual(newFile, newFileExpected, 'Formatting works.');
 
   // Check idempotence
-  newFile = await formatFile(newFile);
+  newFile = await formatFile(newFile, pluginOptions);
 
   assert.strictEqual(newFile, newFileExpected, 'Formatting is idempotent.');
 }
