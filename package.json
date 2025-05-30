@@ -32,7 +32,8 @@
     "prepare": "pnpm build",
     "release:prepare": "changeset version",
     "release:publish": "pnpm build && changeset publish",
-    "test": "./build.sh --test && mt dist-for-testing --quiet"
+    "test": "./build.sh --test && mt dist-for-testing --quiet",
+    "update-test-fixtures": "pnpm build && node \"update-test-fixtures.mjs\""
   },
   "dependencies": {
     "@babel/core": "^7.27.3"
