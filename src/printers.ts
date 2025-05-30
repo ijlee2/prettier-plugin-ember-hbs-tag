@@ -33,6 +33,10 @@ function embed(path: AstPath<NodeType>, options: PluginOptions<NodeType>) {
       singleQuote: false,
     });
 
+    if (content === '') {
+      return ['``'];
+    }
+
     return [
       '`',
       AST.builders.indent([AST.builders.hardline, content]),
