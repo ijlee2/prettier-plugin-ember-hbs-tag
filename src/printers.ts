@@ -19,6 +19,10 @@ function embed(path: AstPath<NodeType>, options: PluginOptions<NodeType>) {
     return;
   }
 
+  if (options.preserveTrailingWhitespace) {
+    return;
+  }
+
   const text = node.quasis[0]?.value.raw ?? '';
 
   return async (

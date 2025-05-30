@@ -1,6 +1,21 @@
-import type { ParserOptions, SupportOptions } from 'prettier';
+import type {
+  BooleanSupportOption,
+  ParserOptions,
+  SupportOptions,
+} from 'prettier';
 
-export const options: SupportOptions = {};
+const preserveTrailingWhitespace: BooleanSupportOption = {
+  category: 'Format',
+  description: 'Preserve trailing whitespace in the `hbs` template',
+  default: false,
+  type: 'boolean',
+};
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type, @typescript-eslint/no-explicit-any
-export interface PluginOptions<T = any> extends ParserOptions<T> {}
+export const options: SupportOptions = {
+  preserveTrailingWhitespace,
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface PluginOptions<T = any> extends ParserOptions<T> {
+  preserveTrailingWhitespace?: boolean;
+}

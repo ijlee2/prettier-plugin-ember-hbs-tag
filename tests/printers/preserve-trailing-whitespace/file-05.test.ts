@@ -6,5 +6,8 @@ test('printers > preserve-trailing-whitespace > file-05', async function () {
   await runPrettierOnFile({
     fileName: 'file-05.ts',
     fixturePath: 'printers/preserve-trailing-whitespace',
+    pluginOptions: {
+      preserveTrailingWhitespace: true,
+    },
   });
 });
