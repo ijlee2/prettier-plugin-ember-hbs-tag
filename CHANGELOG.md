@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 0.3.1
+
+### Patch Changes
+
+- [#5](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/5) Updated printer name ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.0
 
 ### Minor Changes
