@@ -4,14 +4,14 @@ import { join } from 'node:path';
 import { findFiles } from '@codemod-utils/files';
 import { assertFixture, loadFixture } from '@codemod-utils/tests';
 
-import type { PluginOptions } from '../../src/options.js';
+import type { NodeType, PluginOptions } from '../../src/index.js';
 import { formatFile } from './format-file.js';
 
 type DirJSON = Parameters<typeof loadFixture>[0];
 
 type Options = {
   fixturePath: string;
-  pluginOptions?: PluginOptions;
+  pluginOptions?: Partial<PluginOptions<NodeType>>;
 };
 
 export async function runPrettier(options: Options): Promise<void> {
