@@ -4,9 +4,7 @@ export const Default1 = {
   render: (args) => {
     return {
       context: args,
-      template: hbs`
-        <Hello />
-      `,
+      template: hbs`<Hello />`,
     };
   },
 };
@@ -26,10 +24,7 @@ export const Default3 = {
   render: (args) => {
     return {
       context: args,
-      template: hbs`
-        <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        />
-      `,
+      template: hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa />`,
     };
   },
 };
@@ -39,8 +34,7 @@ export const Default4 = {
     return {
       context: args,
       template: hbs`
-        <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        />
+        <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa />
       `,
     };
   },
@@ -52,9 +46,9 @@ export const Default5 = {
       return {
         context: args,
         aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa: hbs`
-          <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          />
-        `,
+        <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        />
+      `,
       };
     },
 };
@@ -69,9 +63,7 @@ export const WithArguments1 = {
   render: (args) => {
     return {
       context: args,
-      template: hbs`
-        <Hello @name={{this.name}} />
-      `,
+      template: hbs`<Hello @name={{this.name}} />`,
     };
   },
 };
@@ -87,7 +79,9 @@ export const WithArguments2 = {
     return {
       context: args,
       template: hbs`
+
         <Hello @name={{this.name}} />
+
       `,
     };
   },
@@ -104,7 +98,9 @@ export const WithArguments3 = {
     return {
       context: args,
       template: hbs`
-        <Hello @name={{this.name}} />
+        <Hello
+          @name={{this.name}}
+        />
       `,
     };
   },
@@ -120,11 +116,7 @@ export const WithArguments4 = {
   render: (args) => {
     return {
       context: args,
-      template: hbs`
-        <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          @name={{this.name}}
-        />
-      `,
+      template: hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa @name={{this.name}} />`,
     };
   },
 };
