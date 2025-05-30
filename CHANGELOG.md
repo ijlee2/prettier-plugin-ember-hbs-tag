@@ -1,5 +1,15 @@
 # prettier-plugin-ember-hbs-tag
 
+## 0.3.0
+
+### Minor Changes
+
+- [#4](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/4) Implemented embed and print methods ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#3](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/3) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.0
 
 ### Minor Changes
