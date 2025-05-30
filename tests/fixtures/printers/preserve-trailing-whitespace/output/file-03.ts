@@ -18,39 +18,25 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (1)', async function (this: TestContext, assert) {
-    await render<TestContext>(
-      hbs`
-
-      `,
-    );
+    await render<TestContext>(hbs``);
 
     assert.ok(true);
   });
 
   test('it renders (2)', async function (this: TestContext, assert) {
-    await render<TestContext>(
-      hbs`
-
-      `,
-    );
+    await render<TestContext>(hbs``);
 
     assert.ok(true);
   });
 
   test('it renders (3)', async function (this: TestContext, assert) {
-    await render<TestContext>(
-      hbs`
-
-      `,
-    );
+    await render<TestContext>(hbs``);
 
     assert.ok(true);
   });
 
   test('it renders (4)', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs`
-
-    `);
+    await render<TestContext>(hbs``);
     assert.ok(true);
   });
 
@@ -89,9 +75,7 @@ module('Integration | Component | hello', function (hooks) {
       render;
 
     await aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<TestContext>(
-      hbs`
-
-      `,
+      hbs``,
     );
 
     assert.ok(true);
