@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "description": "Prettier plugin to format hbs tags",
+  "keywords": [
+    "ember",
+    "emberjs",
+    "prettier",
+    "prettier-plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ijlee2/prettier-plugin-ember-hbs-tag.git"
@@ -10,6 +16,13 @@
   "license": "MIT",
   "author": "Isaac J. Lee",
   "type": "module",
+  "main": "dist/src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "./build.sh --production",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
@@ -22,7 +35,11 @@
     "release:publish": "pnpm build && changeset publish",
     "test": "./build.sh --test && mt dist-for-testing --quiet"
   },
+  "dependencies": {
+    "@babel/core": "^7.27.3"
+  },
   "devDependencies": {
+    "@babel/types": "^7.27.3",
     "@changesets/cli": "^2.29.4",
     "@changesets/get-github-info": "^0.6.0",
     "@codemod-utils/files": "^3.0.1",
@@ -32,11 +49,20 @@
     "@sondr3/minitest": "^0.1.2",
     "@tsconfig/node20": "^20.1.5",
     "@tsconfig/strictest": "^2.0.5",
+    "@types/babel__core": "^7.20.5",
     "@types/node": "^20.17.54",
     "concurrently": "^9.1.2",
     "eslint": "^9.27.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": false
+    }
   },
   "packageManager": "pnpm@9.15.9",
   "engines": {
