@@ -51,9 +51,13 @@ module('Integration | Component | hello', function (hooks) {
   test('it renders (5)', async function (this: TestContext, assert) {
     await render<TestContext>(
       hbs`
-        <Hello @age={{30}}
-        @name={{this.name}} {{! prettier-ignore }}
-      data-test-message  />`,
+        <Hello
+          @age={{30}}
+          @name={{this.name}}
+          {{! prettier-ignore }}
+          data-test-message
+        />
+      `,
     );
   });
 

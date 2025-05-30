@@ -31,9 +31,12 @@ module('Integration | Component | ui/form/textarea', function (hooks) {
 
   test('The component renders a label and a textarea', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
-        <Ui::Form::Textarea  @changeset={{this.changeset}}  @key="message"   @label="Message"
+      <Ui::Form::Textarea
+        @changeset={{this.changeset}}
+        @key="message"
+        @label="Message"
         @onUpdate={{this.updateChangeset}}
-        />
+      />
     `);
 
     assert
@@ -60,7 +63,8 @@ module('Integration | Component | ui/form/textarea', function (hooks) {
         @isDisabled={{true}}
         @key="message"
         @label="Message"
-        @onUpdate={{this.updateChangeset}} />
+        @onUpdate={{this.updateChangeset}}
+      />
     `);
 
     assert
@@ -75,7 +79,9 @@ module('Integration | Component | ui/form/textarea', function (hooks) {
         @isReadOnly={{true}}
         @key="message"
         @label="Message"
-        @onUpdate={{this.updateChangeset}} />      `);
+        @onUpdate={{this.updateChangeset}}
+      />
+    `);
 
     assert
       .dom('[data-test-field="Message"]')
@@ -84,13 +90,15 @@ module('Integration | Component | ui/form/textarea', function (hooks) {
   });
 
   test('We can pass @isRequired to require a value', async function (this: TestContext, assert) {
-    await render<TestContext>(hbs` <Ui::Form::Textarea  @changeset={{
-    this.changeset}}  @isRequired={{
-    true}}
+    await render<TestContext>(hbs`
+      <Ui::Form::Textarea
+        @changeset={{this.changeset}}
+        @isRequired={{true}}
         @key="message"
         @label="Message"
-        @onUpdate={{this.updateChangeset
-        }} /> `);
+        @onUpdate={{this.updateChangeset}}
+      />
+    `);
 
     assert
       .dom('[data-test-label]')
@@ -118,14 +126,11 @@ module('Integration | Component | ui/form/textarea', function (hooks) {
 
     await render<TestContext>(hbs`
       <Ui::Form::Textarea
-        @changeset={{  this.changeset
-        }}
-        @isRequired={{ true }}
+        @changeset={{this.changeset}}
+        @isRequired={{true}}
         @key="message"
         @label="Message"
-        @onUpdate={{
-            this.updateChangeset
-            }}
+        @onUpdate={{this.updateChangeset}}
       />
     `);
 

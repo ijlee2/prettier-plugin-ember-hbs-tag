@@ -8,9 +8,7 @@ module('Integration | Modifier | autofocus', function (hooks) {
 
   test('The modifier focuses the first editable input', async function (assert) {
     await render(hbs`
-      <form data-test-form
-        {{autofocus}}
-      >
+      <form data-test-form {{autofocus}}>
         <label>Field 1<input data-test-field="1" disabled /></label>
 
         <label>
@@ -20,9 +18,7 @@ module('Integration | Modifier | autofocus', function (hooks) {
 
         <label>
           Field 3
-            <input
-              data-test-field="3"
-            />
+          <input data-test-field="3" />
         </label>
       </form>
     `);

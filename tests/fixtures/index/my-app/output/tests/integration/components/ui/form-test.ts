@@ -27,7 +27,13 @@ module('Integration | Component | ui/form', function (hooks) {
   test('The component renders a form', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
       <Ui::Form
-        @data={{hash donation=undefined email=undefined message="I 🧡 container queries!" name=undefined subscribe=true}}
+        @data={{hash
+          donation=undefined
+          email=undefined
+          message="I 🧡 container queries!"
+          name=undefined
+          subscribe=true
+        }}
         @instructions="Still have questions about ember-container-query? Try sending me a message."
         @onSubmit={{this.submitForm}}
         @title="Contact me"
@@ -35,9 +41,7 @@ module('Integration | Component | ui/form', function (hooks) {
       >
         <div>
           <F.Input
-            @isRequired={{
-              true
-            }}
+            @isRequired={{true}}
             @key="name"
             @label="Name"
             @placeholder="Zoey"
@@ -45,26 +49,30 @@ module('Integration | Component | ui/form', function (hooks) {
         </div>
 
         <div>
-          <F.Input @isRequired={{true}} @key="email" @label="Email" @placeholder="zoey@emberjs.com" @type="email" />
+          <F.Input
+            @isRequired={{true}}
+            @key="email"
+            @label="Email"
+            @placeholder="zoey@emberjs.com"
+            @type="email"
+          />
         </div>
 
         <div> <F.Textarea @key="message" @label="Message" /> </div>
 
         <div>
-    <F.Checkbox
-      @key="subscribe"
-        @label="Subscribe to The Ember Times?"
-          />
+          <F.Checkbox @key="subscribe" @label="Subscribe to The Ember Times?" />
         </div>
 
         <div>
-            <F.Number @key="donation"  @label="Donation amount ($)"
-            @minValue={{  0  }}
+          <F.Number
+            @key="donation"
+            @label="Donation amount ($)"
+            @minValue={{0}}
             @placeholder="100"
-            @step={{
-              10
-            }}  />
-</div>
+            @step={{10}}
+          />
+        </div>
       </Ui::Form>
     `);
 
@@ -98,58 +106,52 @@ module('Integration | Component | ui/form', function (hooks) {
   test('We can submit the form', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
       <Ui::Form
-      @data={{hash
-      donation=undefined
-      email=undefined
-      message="I 🧡 container queries!"
-      name=undefined
-      subscribe=true
-      }}
-      @onSubmit={{this.submitForm}}
-      as |F|
+        @data={{hash
+          donation=undefined
+          email=undefined
+          message="I 🧡 container queries!"
+          name=undefined
+          subscribe=true
+        }}
+        @onSubmit={{this.submitForm}}
+        as |F|
       >
-      <div>
-      <F.Input
-      @isRequired={{true}}
-      @key="name"
-      @label="Name"
-      @placeholder="Zoey"
-      />
-      </div>
+        <div>
+          <F.Input
+            @isRequired={{true}}
+            @key="name"
+            @label="Name"
+            @placeholder="Zoey"
+          />
+        </div>
 
-      <div>
-      <F.Input
-      @isRequired={{true}}
-      @key="email"
-      @label="Email"
-      @placeholder="zoey@emberjs.com"
-      @type="email"
-      />
-      </div>
+        <div>
+          <F.Input
+            @isRequired={{true}}
+            @key="email"
+            @label="Email"
+            @placeholder="zoey@emberjs.com"
+            @type="email"
+          />
+        </div>
 
-      <div>
-      <F.Textarea
-      @key="message"
-      @label="Message"
-      />
-      </div>
+        <div>
+          <F.Textarea @key="message" @label="Message" />
+        </div>
 
-      <div>
-      <F.Checkbox
-      @key="subscribe"
-      @label="Subscribe to The Ember Times?"
-      />
-      </div>
+        <div>
+          <F.Checkbox @key="subscribe" @label="Subscribe to The Ember Times?" />
+        </div>
 
-      <div>
-      <F.Number
-      @key="donation"
-      @label="Donation amount ($)"
-      @minValue={{0}}
-      @placeholder="100"
-      @step={{10}}
-      />
-      </div>
+        <div>
+          <F.Number
+            @key="donation"
+            @label="Donation amount ($)"
+            @minValue={{0}}
+            @placeholder="100"
+            @step={{10}}
+          />
+        </div>
       </Ui::Form>
     `);
 

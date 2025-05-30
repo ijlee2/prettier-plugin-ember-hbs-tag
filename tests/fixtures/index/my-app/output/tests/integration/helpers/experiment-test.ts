@@ -57,10 +57,7 @@ module('Integration | Helper | experiment', function (hooks) {
 
   test('returns false if the variant has not been assigned', async function (assert) {
     await render(hbs`
-      {{#if (experiment
-        name="experiment-b"
-        variant="v1"
-      )}}
+      {{#if (experiment name="experiment-b" variant="v1")}}
         <div data-test-block>
           Some content
         </div>

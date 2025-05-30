@@ -7,11 +7,19 @@ module('Integration | Component | hello', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders (1)', async function (assert) {
-    await render(hbs`<Hello />`);
+    await render(
+      hbs`
+        <Hello />
+      `,
+    );
   });
 
   test('it renders (2)', async function (assert) {
-    await render(hbs`  <Hello   />  `);
+    await render(
+      hbs`
+        <Hello />
+      `,
+    );
   });
 
   test('it renders (3)', async function (assert) {
@@ -21,8 +29,9 @@ module('Integration | Component | hello', function (hooks) {
   });
 
   test('it renders (4)', async function (assert) {
-    await render(hbs`<Hello
-    />`);
+    await render(hbs`
+      <Hello />
+    `);
   });
 
   test('it renders (5)', async function (assert) {
@@ -35,7 +44,7 @@ module('Integration | Component | hello', function (hooks) {
     await render(
       hbs`
         <Hello />
-    `,
+      `,
     );
   });
 
@@ -49,13 +58,17 @@ module('Integration | Component | hello', function (hooks) {
 
   test('it renders (8)', async function (assert) {
     await render(
-      hbs`<Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa />`,
+      hbs`
+        <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        />
+      `,
     );
   });
 
   test('it renders (9)', async function (assert) {
     await render(hbs`
-      <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa />
+      <Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      />
     `);
   });
 });

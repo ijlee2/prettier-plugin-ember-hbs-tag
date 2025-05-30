@@ -33,11 +33,11 @@ module('Integration | Component | products/product/card', function (hooks) {
 
   test('it renders', async function (this: TestContext, assert) {
     await render<TestContext>(hbs`
-
       <Products::Product::Card
-         @product={{this.product}}  @redirectTo="products.product"
- />
-       `);
+        @product={{this.product}}
+        @redirectTo="products.product"
+      />
+    `);
 
     assert
       .dom('[data-test-field="Name"]')
