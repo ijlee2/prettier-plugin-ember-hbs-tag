@@ -1,7 +1,10 @@
 import { test } from '@codemod-utils/tests';
 
-import { runPrettier } from '../../helpers/shared-test-setups/printers/default-options.js';
+import { runPrettierOnFile } from '../../helpers/index.js';
 
 test('printers > default-options > file-06', async function () {
-  await runPrettier('file-06.ts');
+  await runPrettierOnFile({
+    fileName: 'file-06.ts',
+    fixturePath: 'printers/default-options',
+  });
 });

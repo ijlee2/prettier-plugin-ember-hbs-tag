@@ -1,7 +1,10 @@
 import { test } from '@codemod-utils/tests';
 
-import { runPrettier } from '../../helpers/shared-test-setups/printers/preserve-trailing-whitespace.js';
+import { runPrettierOnFile } from '../../helpers/index.js';
 
 test('printers > preserve-trailing-whitespace > file-11', async function () {
-  await runPrettier('file-11.js');
+  await runPrettierOnFile({
+    fileName: 'file-11.js',
+    fixturePath: 'printers/preserve-trailing-whitespace',
+  });
 });

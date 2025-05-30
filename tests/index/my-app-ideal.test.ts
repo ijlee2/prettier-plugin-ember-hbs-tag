@@ -1,10 +1,14 @@
 import { test } from '@codemod-utils/tests';
 
-import { runPrettier } from '../helpers/shared-test-setups/index/my-app-ideal.js';
+import { runPrettier } from '../helpers/index.js';
 
 test('index > my-app-ideal', async function () {
-  await runPrettier();
+  await runPrettier({
+    fixturePath: 'index/my-app-ideal',
+  });
 
   // Check idempotence
-  await runPrettier();
+  await runPrettier({
+    fixturePath: 'index/my-app-ideal',
+  });
 });
