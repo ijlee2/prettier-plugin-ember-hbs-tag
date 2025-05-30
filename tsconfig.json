@@ -7,6 +7,6 @@
     "outDir": "dist-for-testing",
     "verbatimModuleSyntax": true
   },
-  "include": ["src", "tests"],
+  "include": ["src", "tests", "types"],
   "exclude": ["tests/fixtures"]
 }

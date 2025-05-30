@@ -7,6 +7,6 @@
     "outDir": "dist/src",
     "verbatimModuleSyntax": true
   },
-  "include": ["src"],
+  "include": ["src", "types"],
   "exclude": []
 }
