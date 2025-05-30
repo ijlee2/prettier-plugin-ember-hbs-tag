@@ -8,5 +8,5 @@
     "verbatimModuleSyntax": true
   },
   "include": ["src", "tests", "types"],
-  "exclude": ["tests/fixtures"]
+  "exclude": ["tests/fixtures/**/input", "tests/fixtures/**/output"]
 }
