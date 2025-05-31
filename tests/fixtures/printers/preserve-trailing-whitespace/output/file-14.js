@@ -67,12 +67,12 @@ module('setupRenderingContext "real world"', function (hooks) {
     setResolverRegistry({
       'component:promise-wrapper': setComponentTemplate(
         PromiseWrapperTemplate,
-        class extends PromiseWrapper {}
+        class extends PromiseWrapper {},
       ),
 
       'component:click-me-button': setComponentTemplate(
         ClickMeButtonTemplate,
-        class extends ClickMeButtonComponent {}
+        class extends ClickMeButtonComponent {},
       ),
     });
 
@@ -106,7 +106,7 @@ module('setupRenderingContext "real world"', function (hooks) {
     assert.equal(
       this.element.textContent,
       'Please wait',
-      'has pending content'
+      'has pending content',
     );
 
     deferred.resolve('Yippie!');
@@ -126,17 +126,17 @@ module('setupRenderingContext "real world"', function (hooks) {
     assert.equal(
       rootElement.textContent,
       '',
-      'the rootElement is empty before rendering'
+      'the rootElement is empty before rendering',
     );
 
     await render(
-      hbs`<div>{{#in-element this.rootElement insertBefore=null}}{{click-me-button}}{{/in-element}}</div>`
+      hbs`<div>{{#in-element this.rootElement insertBefore=null}}{{click-me-button}}{{/in-element}}</div>`,
     );
 
     assert.equal(
       rootElement.textContent,
       'Click Me!',
-      'the rootElement has the correct content after initial render'
+      'the rootElement has the correct content after initial render',
     );
 
     await click('.click-me-button');
@@ -144,7 +144,7 @@ module('setupRenderingContext "real world"', function (hooks) {
     assert.equal(
       rootElement.textContent,
       'Clicked!',
-      'the rootElement has the correct content after clicking'
+      'the rootElement has the correct content after clicking',
     );
   });
 
@@ -160,7 +160,7 @@ module('setupRenderingContext "real world"', function (hooks) {
             scope() {
               return { add };
             },
-          })
+          }),
         );
 
         assert.equal(this.element.textContent, '4');
@@ -188,7 +188,7 @@ module('setupRenderingContext "real world"', function (hooks) {
                 MyComponent,
               };
             },
-          }
+          },
         );
 
         const component = setComponentTemplate(template, templateOnly());

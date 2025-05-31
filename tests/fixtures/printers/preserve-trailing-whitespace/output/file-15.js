@@ -138,7 +138,7 @@ module('setupApplicationContext', function (hooks) {
 
     assert.equal(
       this.element.querySelector('.nav').textContent,
-      'posts | widgets'
+      'posts | widgets',
     );
     assert.equal(this.element.querySelector('h1').textContent, 'Hello World!');
   });
@@ -157,7 +157,7 @@ module('setupApplicationContext', function (hooks) {
 
     assert.equal(
       this.element.querySelector('.nav').textContent,
-      'posts | widgets'
+      'posts | widgets',
     );
     assert.equal(this.element.querySelector('.post-id').textContent, '1');
   });
@@ -170,7 +170,7 @@ module('setupApplicationContext', function (hooks) {
 
     assert.equal(
       this.element.querySelector('.nav').textContent,
-      'posts | widgets'
+      'posts | widgets',
     );
     assert.equal(this.element.querySelector('.post-id').textContent, '1');
 
@@ -181,7 +181,7 @@ module('setupApplicationContext', function (hooks) {
 
     assert.equal(
       this.element.querySelector('.nav').textContent,
-      'posts | widgets'
+      'posts | widgets',
     );
     assert.equal(this.element.querySelector('h1').textContent, 'Hello World!');
 
@@ -192,7 +192,7 @@ module('setupApplicationContext', function (hooks) {
 
     assert.equal(
       this.element.querySelector('.nav').textContent,
-      'posts | widgets'
+      'posts | widgets',
     );
     assert.equal(this.element.querySelector('.post-id').textContent, '2');
   });

@@ -126,7 +126,7 @@ module('settled real-world scenarios', function (hooks) {
         function () {
           return [200, { 'Content-Type': 'text/plain' }, 'Remote Data!'];
         },
-        25
+        25,
       );
     });
   });
@@ -144,7 +144,7 @@ module('settled real-world scenarios', function (hooks) {
 
     assert.ok(
       isSettled(),
-      `should be settled after awaiting: ${JSON.stringify(getSettledState())}`
+      `should be settled after awaiting: ${JSON.stringify(getSettledState())}`,
     );
   });
 
@@ -208,7 +208,7 @@ module('settled real-world scenarios', function (hooks) {
 
     assert.equal(
       this.element.textContent,
-      'Local Data!Remote Data!Remote Data!'
+      'Local Data!Remote Data!Remote Data!',
     );
   });
 
