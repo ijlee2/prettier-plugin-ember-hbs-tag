@@ -60,8 +60,10 @@ module('rerender real-world', function (hooks) {
     }
 
     setComponentTemplate(
-      hbs`<div data-test-content>The profile for {{@name}} is {{this.value}}</div>`,
-      MyComponent
+      hbs`
+        <div data-test-content>The profile for {{@name}} is {{this.value}}</div>
+      `,
+      MyComponent,
     );
 
     class Person {
@@ -78,7 +80,7 @@ module('rerender real-world', function (hooks) {
             MyComponent,
           };
         },
-      }
+      },
     );
 
     const component = setComponentTemplate(template, templateOnly());
@@ -89,7 +91,7 @@ module('rerender real-world', function (hooks) {
     assert.equal(
       this.element.textContent,
       '',
-      'precond - Nothing on the screen yet'
+      'precond - Nothing on the screen yet',
     );
 
     // This lets us wait for rendering to actually occur without resolving the render promise itself.
@@ -101,7 +103,7 @@ module('rerender real-world', function (hooks) {
     assert.equal(
       element.textContent,
       'The profile for Zoey is loading',
-      'initial render'
+      'initial render',
     );
 
     // updated the person's name to trigger a rerender
@@ -114,7 +116,7 @@ module('rerender real-world', function (hooks) {
     assert.equal(
       this.element.textContent,
       'The profile for Zoey is loading',
-      'after rerender'
+      'after rerender',
     );
 
     let settledState = getSettledState();
@@ -125,12 +127,12 @@ module('rerender real-world', function (hooks) {
     assert.equal(
       settledState.isRenderPending,
       true,
-      'ensure isRenderPending is true'
+      'ensure isRenderPending is true',
     );
     assert.equal(
       settledState.hasPendingWaiters,
       true,
-      'ensure test harness / setup is working -- test waiter is pending'
+      'ensure test harness / setup is working -- test waiter is pending',
     );
 
     // This should resolve isRenderPending but not affect the waiters at all since rerender only
@@ -141,7 +143,7 @@ module('rerender real-world', function (hooks) {
     assert.equal(
       this.element.textContent,
       'The profile for Tomster is loading',
-      'resolve rerender'
+      'resolve rerender',
     );
     settledState = getSettledState();
 

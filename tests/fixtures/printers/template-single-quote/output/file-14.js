@@ -25,11 +25,11 @@ import { defer } from 'rsvp';
 import { tracked } from '@glimmer/tracking';
 
 const PromiseWrapperTemplate = hbs`
-{{~#if this.settled~}}
-  {{this.fulfillmentValue}}
-{{~else~}}
-  <div class="loading">Please wait</div>
-{{~/if}}
+  {{~#if this.settled~}}
+    {{this.fulfillmentValue}}
+  {{~else~}}
+    <div class='loading'>Please wait</div>
+  {{~/if}}
 `;
 
 const PromiseWrapper = Component.extend({
@@ -43,11 +43,11 @@ const PromiseWrapper = Component.extend({
 });
 
 const ClickMeButtonTemplate = hbs`
-{{~#if this.wasClicked~}}
-  Clicked!
-{{~else~}}
-  Click Me!
-{{~/if~}}
+  {{~#if this.wasClicked~}}
+    Clicked!
+  {{~else~}}
+    Click Me!
+  {{~/if~}}
 `;
 
 const ClickMeButtonComponent = Component.extend({
@@ -67,12 +67,12 @@ module('setupRenderingContext "real world"', function (hooks) {
     setResolverRegistry({
       'component:promise-wrapper': setComponentTemplate(
         PromiseWrapperTemplate,
-        class extends PromiseWrapper {}
+        class extends PromiseWrapper {},
       ),
 
       'component:click-me-button': setComponentTemplate(
         ClickMeButtonTemplate,
-        class extends ClickMeButtonComponent {}
+        class extends ClickMeButtonComponent {},
       ),
     });
 
@@ -99,14 +99,18 @@ module('setupRenderingContext "real world"', function (hooks) {
     this.isWaiterPending = true;
 
     // Does not use `await` intentionally
-    let renderPromise = render(hbs`{{promise-wrapper promise=this.promise}}`);
+    let renderPromise = render(
+      hbs`
+        {{promise-wrapper promise=this.promise}}
+      `,
+    );
 
     await waitFor('.loading');
 
     assert.equal(
       this.element.textContent,
       'Please wait',
-      'has pending content'
+      'has pending content',
     );
 
     deferred.resolve('Yippie!');
@@ -126,17 +130,21 @@ module('setupRenderingContext "real world"', function (hooks) {
     assert.equal(
       rootElement.textContent,
       '',
-      'the rootElement is empty before rendering'
+      'the rootElement is empty before rendering',
     );
 
     await render(
-      hbs`<div>{{#in-element this.rootElement insertBefore=null}}{{click-me-button}}{{/in-element}}</div>`
+      hbs`
+        <div>{{#in-element
+            this.rootElement insertBefore=null
+          }}{{click-me-button}}{{/in-element}}</div>
+      `,
     );
 
     assert.equal(
       rootElement.textContent,
       'Click Me!',
-      'the rootElement has the correct content after initial render'
+      'the rootElement has the correct content after initial render',
     );
 
     await click('.click-me-button');
@@ -144,7 +152,7 @@ module('setupRenderingContext "real world"', function (hooks) {
     assert.equal(
       rootElement.textContent,
       'Clicked!',
-      'the rootElement has the correct content after clicking'
+      'the rootElement has the correct content after clicking',
     );
   });
 
@@ -160,7 +168,7 @@ module('setupRenderingContext "real world"', function (hooks) {
             scope() {
               return { add };
             },
-          })
+          }),
         );
 
         assert.equal(this.element.textContent, '4');
@@ -173,7 +181,12 @@ module('setupRenderingContext "real world"', function (hooks) {
       test('can render locally defined components', async function (assert) {
         class MyComponent extends GlimmerComponent {}
 
-        setComponentTemplate(hbs`my name is {{@name}}`, MyComponent);
+        setComponentTemplate(
+          hbs`
+            my name is {{@name}}
+          `,
+          MyComponent,
+        );
 
         const somePerson = new (class {
           @tracked name = 'Zoey';
@@ -188,7 +201,7 @@ module('setupRenderingContext "real world"', function (hooks) {
                 MyComponent,
               };
             },
-          }
+          },
         );
 
         const component = setComponentTemplate(template, templateOnly());
