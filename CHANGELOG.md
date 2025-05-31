@@ -1,5 +1,16 @@
 # prettier-plugin-ember-hbs-tag
 
+## 0.4.0
+
+### Minor Changes
+
+- [#8](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/8) Allowed passing templateSingleQuote ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#7](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/7) refactor: Restricted the barrel file's API ([@ijlee2](https://github.com/ijlee2))
+- [#6](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/6) Added tests that document old test syntax ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.1
 
 ### Patch Changes
