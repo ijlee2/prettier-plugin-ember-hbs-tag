@@ -19,7 +19,7 @@ Until now, Ember developers had to use [`ember-template-lint-plugin-prettier`](h
 The plugin also poses a few issues:
 
 - It uglifies code inside an `hbs` tag (i.e. wrong indentations in rendering tests, Storybook stories).
-- It needs to dynamically load `prettier` and use a hook from `ember-template-lint` to format `*.hbs`. There's risk because `ember-template-lint` still uses CJS, while `prettier` has moved to ESM.
+- It needs to dynamically load `prettier` and use a hook from `ember-template-lint` to format `*.hbs`. Due to strong coupling, it will fall behind if `prettier` or `ember-template-lint` makes a breaking change to their API.
 - Prettier recommends not running `prettier` through a linter plugin. In January 2025, Ember CLI removed `eslint-plugin-prettier` and `stylelint-prettier` from its blueprints, in order to separate formatting and linting.
 
 In short, what we're missing is a Prettier plugin to format `hbs` tags.
