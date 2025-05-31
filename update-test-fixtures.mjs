@@ -7,6 +7,7 @@ import { format } from 'prettier';
 const defaultOptions = {
   printWidth: 80,
   singleQuote: true,
+  templateSingleQuote: false,
 };
 
 async function formatFile(file, pluginOptions) {
@@ -50,6 +51,10 @@ async function main() {
 
     updateTestFixtures('tests/fixtures/printers/preserve-trailing-whitespace', {
       preserveTrailingWhitespace: true,
+    }),
+
+    updateTestFixtures('tests/fixtures/printers/template-single-quote', {
+      templateSingleQuote: true,
     }),
   ]);
 }
