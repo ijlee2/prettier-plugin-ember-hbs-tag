@@ -1,10 +1,7 @@
 import { format } from 'prettier';
 
-import {
-  type NodeType,
-  PARSER_NAME,
-  type PluginOptions,
-} from '../../src/index.js';
+import type { PluginOptions } from '../../src/options.js';
+import type { NodeType } from '../../src/utils/index.js';
 
 const defaultOptions = {
   printWidth: 80,
@@ -18,7 +15,7 @@ export async function formatFile(
   return await format(file, {
     ...defaultOptions,
     ...pluginOptions,
-    parser: PARSER_NAME,
+    parser: 'ember-hbs-tag',
     plugins: ['./dist-for-testing/src/index.js'],
   });
 }

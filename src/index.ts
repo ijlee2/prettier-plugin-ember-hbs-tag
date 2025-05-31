@@ -1,5 +1,4 @@
-export * from './languages.js';
-export * from './options.js';
-export * from './parsers.js';
-export * from './printers.js';
-export * from './utils/index.js';
+export { languages } from './languages.js';
+export { options } from './options.js';
+export { parsers } from './parsers.js';
+export { printers } from './printers.js';
