@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-ember-hbs-tag",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Prettier plugin to format hbs tags",
   "keywords": [
     "ember",
