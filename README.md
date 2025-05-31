@@ -14,22 +14,24 @@ _Prettier plugin to format `hbs` tags_
 
 ## Why use this package?
 
-Until now, Ember developers had to use [`ember-template-lint-plugin-prettier`](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier) to format their `*.hbs` files. This is a bit strange, because Prettier natively supports `*.hbs` since May 2021. The plugin also poses a few issues:
+Until now, Ember developers had to use [`ember-template-lint-plugin-prettier`](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier) to format their `*.hbs` files. This is a bit strange, because Prettier natively supports `*.hbs` since May 2021.
+
+The plugin also poses a few issues:
 
 - It uglifies code inside an `hbs` tag (i.e. wrong indentations in rendering tests, Storybook stories).
 - It needs to dynamically load `prettier` and use a hook from `ember-template-lint` to format `*.hbs`. There's risk because `ember-template-lint` still uses CJS, while `prettier` has moved to ESM.
-- Prettier recommends not running `prettier` through a linter plugin. In January 2025, Ember CLI removed `eslint-plugin-prettier` and `stylelint-prettier` from its blueprints, in order to better separate formatting from linting.
+- Prettier recommends not running `prettier` through a linter plugin. In January 2025, Ember CLI removed `eslint-plugin-prettier` and `stylelint-prettier` from its blueprints, in order to separate formatting and linting.
 
 In short, what we're missing is a Prettier plugin to format `hbs` tags.
 
 > [!TIP]
 > 
-> Use [`prettier-plugin-ember-template-tag`](https://github.com/ember-tooling/prettier-plugin-ember-template-tag/) to format `<template>` tags. You'll find out below how to use both plugins.
+> Use [`prettier-plugin-ember-template-tag`](https://github.com/ember-tooling/prettier-plugin-ember-template-tag/) to format `<template>` tags. You can find out below how to set up both plugins.
 
 
 ## Installation
 
-1. In `package.json`, replace `ember-template-lint-plugin-prettier` with `prettier-plugin-ember-hbs-tag`. Update the scripts to separate linting and formatting.
+1. In `package.json`, replace `ember-template-lint-plugin-prettier` with `prettier-plugin-ember-hbs-tag`. Update the scripts to separate formatting and linting.
 
     <details>
 
@@ -185,7 +187,7 @@ export default {
 
 ## Compatibility
 
-- Prettier v3 or above
+- Prettier v3
 - Node.js v20 or above
 
 
