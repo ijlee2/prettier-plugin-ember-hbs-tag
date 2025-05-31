@@ -6,6 +6,7 @@ import type { NodeType } from '../../src/utils/index.js';
 const defaultOptions = {
   printWidth: 80,
   singleQuote: true,
+  templateSingleQuote: false,
 };
 
 export async function formatFile(

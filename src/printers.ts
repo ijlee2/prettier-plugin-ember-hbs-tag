@@ -34,7 +34,7 @@ function embed(path: AstPath<NodeType>, options: PluginOptions<NodeType>) {
     const content = await textToDoc(text.trim(), {
       ...options,
       parser: 'glimmer',
-      singleQuote: false,
+      singleQuote: options.templateSingleQuote ?? options.singleQuote,
     });
 
     if (content === '') {
