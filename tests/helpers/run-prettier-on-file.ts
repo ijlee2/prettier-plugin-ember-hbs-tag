@@ -3,7 +3,8 @@ import { join } from 'node:path';
 
 import { assert, loadFixture } from '@codemod-utils/tests';
 
-import type { NodeType, PluginOptions } from '../../src/index.js';
+import type { PluginOptions } from '../../src/options.js';
+import type { NodeType } from '../../src/utils/index.js';
 import { formatFile } from './format-file.js';
 
 type DirJSON = Parameters<typeof loadFixture>[0];

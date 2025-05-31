@@ -4,8 +4,6 @@ import { join } from 'node:path';
 import { findFiles } from '@codemod-utils/files';
 import { format } from 'prettier';
 
-import { PARSER_NAME } from './dist/src/index.js';
-
 const defaultOptions = {
   printWidth: 80,
   singleQuote: true,
@@ -15,7 +13,7 @@ async function formatFile(file, pluginOptions) {
   return await format(file, {
     ...defaultOptions,
     ...pluginOptions,
-    parser: PARSER_NAME,
+    parser: 'ember-hbs-tag',
     plugins: ['./dist/src/index.js'],
   });
 }
