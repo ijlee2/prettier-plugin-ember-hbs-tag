@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 0.4.5
+
+### Patch Changes
+
+- [#14](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/14) Fixed typo ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.4
 
 ### Patch Changes
