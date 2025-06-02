@@ -37,7 +37,7 @@ In short, what we're missing is a Prettier plugin to format `hbs` tags.
 
     <summary><code>package.json</code></summary>
 
-    `eslint-plugin-prettier` and `stylelint-prettier` are assumed to have been removed already. For more details, please see [separate formatting and linting](https://crunchingnumbers.live/2025/06/01/its-time-to-separate-lint-and-format/).
+    `eslint-plugin-prettier` and `stylelint-prettier` are assumed to have been removed already. For more details, please see [my blog post](https://crunchingnumbers.live/2025/06/01/its-time-to-separate-lint-and-format/).
 
     ```diff
     {
