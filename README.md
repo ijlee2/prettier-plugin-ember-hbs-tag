@@ -14,9 +14,9 @@ _Prettier plugin to format `hbs` tags_
 
 ## Why use this package?
 
-Until now, Ember developers had to use [`ember-template-lint-plugin-prettier`](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier) to format their `*.hbs` files. This is a bit strange, because Prettier natively supports `*.hbs` since May 2021.
+Until now, Ember developers had to use [`ember-template-lint-plugin-prettier`](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier) to format their `*.hbs` files. This is a bit strange, because Prettier natively supports Handlebars since May 2021.
 
-The plugin also poses a few issues:
+The plugin also comes with a few issues:
 
 - It uglifies code inside an `hbs` tag (i.e. wrong indentations in rendering tests, Storybook stories).
 - It needs to dynamically load `prettier` and use a hook from `ember-template-lint` to format `*.hbs`. Due to strong coupling, it will fall behind if `prettier` or `ember-template-lint` makes a breaking change to their API.
@@ -31,27 +31,17 @@ In short, what we're missing is a Prettier plugin to format `hbs` tags.
 
 ## Installation
 
-1. In `package.json`, replace `ember-template-lint-plugin-prettier` with `prettier-plugin-ember-hbs-tag`. Update the scripts to separate formatting and linting.
+1. In `package.json`, replace `ember-template-lint-plugin-prettier` with `prettier-plugin-ember-hbs-tag`.
 
     <details>
 
     <summary><code>package.json</code></summary>
 
-    `eslint-plugin-prettier` and `stylelint-prettier` are assumed to have been removed already. For brevity, `lint:css` and `lint:js` scripts aren't shown.
+    `eslint-plugin-prettier` and `stylelint-prettier` are assumed to have been removed already. For more details, please see [separate formatting and linting](https://crunchingnumbers.live/2025/06/01/its-time-to-separate-lint-and-format/).
 
     ```diff
     {
-      "scripts": {
-    +     "format": "prettier . --cache --write",
-        "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
-    -     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
-    +     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" && pnpm format",
-    +     "lint:format": "prettier . --cache --check",
-        "lint:hbs": "ember-template-lint .",
-        "lint:hbs:fix": "ember-template-lint . --fix"
-      },
       "devDependencies": {
-        "concurrently": "...",
         "ember-template-lint": "...",
     -     "ember-template-lint-plugin-prettier": "...",
         "prettier": "...",
@@ -67,7 +57,7 @@ In short, what we're missing is a Prettier plugin to format `hbs` tags.
 
     <details>
 
-    <summary><code>.template-lintrc.js</code></summary>
+    <summary><code>.template-lintrc.cjs</code></summary>
 
     ```diff
     'use strict';
@@ -111,16 +101,31 @@ In short, what we're missing is a Prettier plugin to format `hbs` tags.
       ],
       overrides: [
         {
-          files: '*.{gjs,gts}',
+          files: ['*.{cjs,cts,js,mjs,mts,ts}'],
           options: {
+            singleQuote: true,
+          },
+        },
+        {
+          files: ['tests/**/*-test.{js,ts}'],
+          options: {
+            parser: 'ember-hbs-tag',
+            singleQuote: true,
             templateSingleQuote: false,
           },
         },
         {
-          files: 'tests/**/*-test.{js,ts}',
+          files: ['*.{gjs,gts}'],
           options: {
-            parser: 'ember-hbs-tag',
+            singleQuote: true,
             templateSingleQuote: false,
+          },
+        },
+        {
+          files: ['*.hbs'],
+          options: {
+            printWidth: 64,
+            singleQuote: false,
           },
         },
       ],
@@ -147,7 +152,7 @@ If you need the trailing whitespace to remain unchanged (e.g. in tests), set `pr
 export default {
   overrides: [
     {
-      files: 'tests/**/*-test.{js,ts}',
+      files: ['tests/**/*-test.{js,ts}'],
       options: {
         parser: 'ember-hbs-tag',
 +         preserveTrailingWhitespace: true,
@@ -172,7 +177,7 @@ However, you will most likely want double quotes for templates. So set `template
 export default {
   overrides: [
     {
-      files: 'tests/**/*-test.{js,ts}',
+      files: ['tests/**/*-test.{js,ts}'],
       options: {
         parser: 'ember-hbs-tag',
 +         templateSingleQuote: false,
