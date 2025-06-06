@@ -41,13 +41,13 @@
     "@babel/core": "^7.27.4"
   },
   "devDependencies": {
-    "@babel/types": "^7.27.3",
+    "@babel/types": "^7.27.6",
     "@changesets/cli": "^2.29.4",
     "@changesets/get-github-info": "^0.6.0",
     "@codemod-utils/files": "^3.0.2",
     "@codemod-utils/tests": "^2.0.1",
-    "@ijlee2-frontend-configs/eslint-config-node": "^2.0.0",
-    "@ijlee2-frontend-configs/prettier": "^2.0.0",
+    "@ijlee2-frontend-configs/eslint-config-node": "^2.0.2",
+    "@ijlee2-frontend-configs/prettier": "^2.0.1",
     "@sondr3/minitest": "^0.1.2",
     "@tsconfig/node20": "^20.1.5",
     "@tsconfig/strictest": "^2.0.5",
