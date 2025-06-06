@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 0.4.6
+
+### Patch Changes
+
+- [#15](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/15) Removed pnpm from engines ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.5
 
 ### Patch Changes
