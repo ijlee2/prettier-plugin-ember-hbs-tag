@@ -38,24 +38,24 @@
     "update-test-fixtures": "pnpm build && node \"update-test-fixtures.mjs\""
   },
   "dependencies": {
-    "@babel/core": "^7.27.4"
+    "@babel/core": "^7.28.0"
   },
   "devDependencies": {
-    "@babel/types": "^7.27.6",
-    "@changesets/cli": "^2.29.4",
+    "@babel/types": "^7.28.2",
+    "@changesets/cli": "^2.29.5",
     "@changesets/get-github-info": "^0.6.0",
-    "@codemod-utils/files": "^3.0.2",
-    "@codemod-utils/tests": "^2.0.1",
-    "@ijlee2-frontend-configs/eslint-config-node": "^2.0.2",
-    "@ijlee2-frontend-configs/prettier": "^2.0.1",
+    "@codemod-utils/files": "^3.0.3",
+    "@codemod-utils/tests": "^2.0.2",
+    "@ijlee2-frontend-configs/eslint-config-node": "^2.1.0",
+    "@ijlee2-frontend-configs/prettier": "^2.1.0",
     "@sondr3/minitest": "^0.1.2",
-    "@tsconfig/node20": "^20.1.5",
+    "@tsconfig/node20": "^20.1.6",
     "@tsconfig/strictest": "^2.0.5",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^20.17.57",
-    "concurrently": "^9.1.2",
-    "eslint": "^9.28.0",
-    "prettier": "^3.5.3",
+    "@types/node": "^20.19.9",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
