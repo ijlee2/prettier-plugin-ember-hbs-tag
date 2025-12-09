@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, sep } from 'node:path';
 
 import { assert, loadFixture } from '@codemod-utils/tests';
 
@@ -19,7 +19,7 @@ export async function runPrettierOnFile(options: Options): Promise<void> {
   const { fileName, fixturePath, pluginOptions } = options;
 
   const { inputProject, outputProject } = (await import(
-    join('../fixtures', fixturePath, 'index.js')
+    join('../fixtures', fixturePath, 'index.js').replaceAll(sep, '/')
   )) as {
     inputProject: DirJSON;
     outputProject: DirJSON;
