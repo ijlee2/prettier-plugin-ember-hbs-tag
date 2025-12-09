@@ -1,3 +1,5 @@
+import { EOL } from 'node:os';
+
 import { format } from 'prettier';
 
 import type { PluginOptions } from '../../src/options.js';
@@ -9,6 +11,8 @@ const defaultOptions = {
   templateSingleQuote: false,
 };
 
+const onPosix = EOL === '\n';
+
 export async function formatFile(
   file: string,
   pluginOptions?: Partial<PluginOptions<NodeType>>,
@@ -16,6 +20,7 @@ export async function formatFile(
   return await format(file, {
     ...defaultOptions,
     ...pluginOptions,
+    endOfLine: onPosix ? 'lf' : 'crlf',
     parser: 'ember-hbs-tag',
     plugins: ['./dist-for-testing/src/index.js'],
   });
