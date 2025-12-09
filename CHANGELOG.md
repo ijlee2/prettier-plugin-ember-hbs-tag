@@ -1,5 +1,12 @@
 # prettier-plugin-ember-hbs-tag
 
+## 1.0.1
+
+### Patch Changes
+
+- [#20](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/20) Supported Windows ([@ijlee2](https://github.com/ijlee2))
+- [#19](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/19) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.0
 
 ### Major Changes
