@@ -31,8 +31,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1(@typescript-eslint/parser@8.49.0(eslint@9.39.1)(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.1)(typescript@5.9.3)
       '@ijlee2-frontend-configs/prettier':
-        specifier: ^2.3.0
-        version: 2.3.0(prettier@3.7.4)
+        specifier: ^2.3.1
+        version: 2.3.1(prettier@3.7.4)
       '@sondr3/minitest':
         specifier: ^0.1.2
         version: 0.1.2
@@ -288,8 +288,8 @@ packages:
       typescript:
         optional: true
 
-  '@ijlee2-frontend-configs/prettier@2.3.0':
-    resolution: {integrity: sha512-fcOVicKm1rLFRwRPGj050CS8J6+yPxbbpgHWRuGp+XD8+vzAQ/7+O7UourGKU0kohnG6FmBm/UC0n6olxpHYxQ==}
+  '@ijlee2-frontend-configs/prettier@2.3.1':
+    resolution: {integrity: sha512-xc4nMqo+QT7P69S5GDVpG1WN8W4pf1Oc5PJMNc+r1DJQ/c772MHwal1psDB/FDi01y+T6yPIFf0qD+9fs1ruZA==}
     engines: {node: 20.* || >= 22}
     peerDependencies:
       prettier: ^3.7.4
@@ -1285,8 +1285,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-ember-hbs-tag@1.0.0:
-    resolution: {integrity: sha512-erGe9vDfhjQoXjz+M9W7s3QDUpSsnR/TAdMhYntzEY9kIVut9rtdx33z+Vbw8VR6in/+vzb3mZVTAuCE5eWK+w==}
+  prettier-plugin-ember-hbs-tag@1.0.1:
+    resolution: {integrity: sha512-fSWZaXX8VNT4cIRCdY99iGOCVlZyhTJIk7nClc4eKv0I9B/633lew9sS0nNJl07fjhx3W8gZ3WVVZoMFFkrqQw==}
     engines: {node: 20.* || >= 22}
     peerDependencies:
       prettier: ^3.0.0
@@ -1925,10 +1925,10 @@ snapshots:
       - eslint-plugin-import
       - supports-color
 
-  '@ijlee2-frontend-configs/prettier@2.3.0(prettier@3.7.4)':
+  '@ijlee2-frontend-configs/prettier@2.3.1(prettier@3.7.4)':
     dependencies:
       prettier: 3.7.4
-      prettier-plugin-ember-hbs-tag: 1.0.0(prettier@3.7.4)
+      prettier-plugin-ember-hbs-tag: 1.0.1(prettier@3.7.4)
       prettier-plugin-ember-template-tag: 2.1.2(prettier@3.7.4)
     transitivePeerDependencies:
       - supports-color
@@ -2923,7 +2923,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-ember-hbs-tag@1.0.0(prettier@3.7.4):
+  prettier-plugin-ember-hbs-tag@1.0.1(prettier@3.7.4):
     dependencies:
       '@babel/core': 7.28.5
       prettier: 3.7.4
