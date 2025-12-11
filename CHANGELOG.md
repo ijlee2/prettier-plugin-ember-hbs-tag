@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 1.0.2
+
+### Patch Changes
+
+- [#21](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/21) Removed @babel/core (unused) ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.1
 
 ### Patch Changes
