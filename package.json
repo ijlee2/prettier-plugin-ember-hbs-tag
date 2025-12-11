@@ -37,9 +37,6 @@
     "test": "sh build.sh --test && mt dist-for-testing --quiet",
     "update-test-fixtures": "pnpm build && node \"update-test-fixtures.mjs\""
   },
-  "dependencies": {
-    "@babel/core": "^7.28.5"
-  },
   "devDependencies": {
     "@babel/types": "^7.28.5",
     "@changesets/cli": "^2.29.8",
