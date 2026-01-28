@@ -5,7 +5,10 @@ import { type NodeType, PARSER_NAME, PRINTER_NAME } from './utils/index.js';
 
 const parser = prettierParsers['babel-ts'] as Parser<NodeType>;
 
-async function parse(text: string, options: ParserOptions<NodeType>) {
+async function parse(
+  text: string,
+  options: ParserOptions<NodeType>,
+): Promise<NodeType> {
   const ast = await parser.parse(text, options);
 
   return ast;
