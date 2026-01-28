@@ -16,9 +16,6 @@
   "author": "Isaac J. Lee",
   "type": "module",
   "main": "dist/src/index.js",
-  "directories": {
-    "test": "tests"
-  },
   "files": [
     "dist"
   ],
