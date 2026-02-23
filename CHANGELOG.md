@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 2.0.0
+
+### Major Changes
+
+- [#26](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/26) Dropped support for Node 20 ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.4
 
 ### Patch Changes
