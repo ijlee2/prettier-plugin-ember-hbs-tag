@@ -193,7 +193,7 @@ export default {
 ## Compatibility
 
 - Prettier v3
-- Node.js v20 or above
+- Node.js v22 or above
 
 
 ## Contributing
