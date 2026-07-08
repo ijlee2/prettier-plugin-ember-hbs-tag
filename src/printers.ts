@@ -58,13 +58,14 @@ function print(
   print: (path: AstPath<NodeType>) => AST.builders.Doc,
   args?: unknown,
 ): AST.builders.Doc {
+  // @ts-expect-error: Incorrect type
   return printer.print(path, options, print, args);
 }
 
 export const printers: Record<string, Printer<NodeType>> = {
   [PRINTER_NAME]: {
     ...printer,
-    // @ts-expect-error: Type <...> is not assignable to <...>
+    // @ts-expect-error: Incorrect type
     embed,
     print,
   },
