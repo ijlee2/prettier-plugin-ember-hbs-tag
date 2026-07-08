@@ -15,7 +15,7 @@
   "license": "MIT",
   "author": "Isaac J. Lee",
   "type": "module",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],

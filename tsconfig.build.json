@@ -4,7 +4,7 @@
     "declaration": false,
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "outDir": "dist/src",
+    "outDir": "dist",
     "rootDir": "./src",
     "target": "esnext",
     "types": ["@types/babel__core", "@types/node"],
