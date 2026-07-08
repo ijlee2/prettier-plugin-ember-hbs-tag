@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 2.0.2
+
+### Patch Changes
+
+- [#32](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/32) Updated dependencies (eslint@v10, typescript@v6) ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.1
 
 ### Patch Changes
