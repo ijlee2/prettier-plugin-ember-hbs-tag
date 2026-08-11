@@ -36,20 +36,20 @@
   },
   "devDependencies": {
     "@babel/types": "^7.29.7",
-    "@changesets/cli": "^2.31.0",
+    "@changesets/cli": "^2.31.1",
     "@codemod-utils/files": "^4.1.0",
     "@codemod-utils/tests": "^3.1.0",
-    "@ijlee2-frontend-configs/changesets": "^2.1.1",
-    "@ijlee2-frontend-configs/eslint-config-node": "^4.1.0",
-    "@ijlee2-frontend-configs/prettier": "^3.3.0",
+    "@ijlee2-frontend-configs/changesets": "^2.1.2",
+    "@ijlee2-frontend-configs/eslint-config-node": "^4.2.0",
+    "@ijlee2-frontend-configs/prettier": "^3.3.2",
     "@sondr3/minitest": "^0.1.2",
     "@tsconfig/node22": "^22.0.5",
     "@tsconfig/strictest": "^2.0.8",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.20.0",
-    "concurrently": "^10.0.3",
-    "eslint": "^10.6.0",
-    "prettier": "^3.9.4",
+    "@types/node": "^22.20.1",
+    "concurrently": "^10.0.4",
+    "eslint": "^10.8.1",
+    "prettier": "^3.9.6",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
@@ -60,7 +60,7 @@
       "optional": false
     }
   },
-  "packageManager": "pnpm@11.13.0",
+  "packageManager": "pnpm@11.21.0",
   "engines": {
     "node": "22.* || >= 24"
   }
