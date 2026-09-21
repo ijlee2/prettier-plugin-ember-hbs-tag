@@ -1,14 +1,10 @@
 {
-  "extends": ["@tsconfig/node22/tsconfig", "@tsconfig/strictest/tsconfig"],
+  "extends": "@ijlee2-frontend-configs/typescript/node22",
   "compilerOptions": {
     "declaration": false,
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
     "outDir": "dist-for-testing",
     "rootDir": ".",
-    "target": "esnext",
-    "types": ["@types/babel__core", "@types/node"],
-    "verbatimModuleSyntax": true
+    "types": ["@types/babel__core", "@types/node"]
   },
   "include": ["src", "tests", "types"],
   "exclude": ["tests/fixtures/**/input", "tests/fixtures/**/output"]
