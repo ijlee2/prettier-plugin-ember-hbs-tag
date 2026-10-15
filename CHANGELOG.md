@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 2.0.4
+
+### Patch Changes
+
+- [#39](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/39) Updated dependencies (@babel/types to v8, replaced eslint with oxlint) ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.3
 
 ### Patch Changes
