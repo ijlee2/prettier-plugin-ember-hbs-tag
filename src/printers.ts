@@ -6,7 +6,7 @@ import { type NodeType, PRINTER_NAME } from './utils/index.js';
 
 const printer = prettierPrinters['estree'] as Printer<NodeType>;
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+// oxlint-disable-next-line typescript/explicit-function-return-type
 function embed(path: AstPath<NodeType>, options: PluginOptions<NodeType>) {
   const { node, parent } = path;
 
@@ -31,7 +31,7 @@ function embed(path: AstPath<NodeType>, options: PluginOptions<NodeType>) {
       text: string,
       options: PluginOptions<NodeType>,
     ) => Promise<AST.builders.Doc>,
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    // oxlint-disable-next-line typescript/explicit-function-return-type
   ) => {
     const content = await textToDoc(text.trim(), {
       ...options,
