@@ -22,7 +22,7 @@ export const options: SupportOptions = {
   templateSingleQuote,
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// oxlint-disable-next-line typescript/no-explicit-any
 export interface PluginOptions<T = any> extends ParserOptions<T> {
   preserveTrailingWhitespace?: boolean;
   templateSingleQuote?: boolean;
