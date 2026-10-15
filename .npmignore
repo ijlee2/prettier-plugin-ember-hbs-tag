@@ -8,7 +8,6 @@
 # misc
 /.DS_Store
 /.env*
-/.eslintcache
 /.git/
 /.github/
 /.gitignore
@@ -17,7 +16,7 @@
 /build.sh
 /CHANGELOG.md
 /CONTRIBUTING.md
-/eslint.config.mjs
+/oxlint.config.mts
 /prettier.config.mjs
 /tests/
 /update-test-fixtures.mjs
