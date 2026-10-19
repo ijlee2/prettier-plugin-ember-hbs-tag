@@ -1,5 +1,11 @@
 # prettier-plugin-ember-hbs-tag
 
+## 2.0.5
+
+### Patch Changes
+
+- [#40](https://github.com/ijlee2/prettier-plugin-ember-hbs-tag/pull/40) Introduced trusted publishing ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.4
 
 ### Patch Changes
